@@ -23,7 +23,7 @@ def scrape_handles(iop):
         output = output + x
 
     output = list(set(output))  # deduplicate
-    print("-"*80)
+    print("-" * 80)
     return output
 
 
@@ -44,23 +44,20 @@ def scrape_links(iop):
         soup = bs(r, "lxml")  # import data
         x = soup.select("time")  # select only <time> tags
         for i in x:
-            links = i.select("a") #select the links within the <time tags>
+            links = i.select("a")  # select the links within the <time tags>
             for link in links:
-                output.append(link.get('href')) #Append the link target to the list
+                output.append(link.get("href"))  # Append the link target to the list
     output = list(set(output))  # deduplicate
-    print("-"*80)
-    return (output)
-
-
+    print("-" * 80)
+    return output
 
 
 if __name__ == "__main__":
-    iop = "https://iop.altmetric.com/details/31746378/"
+    iop = "https://iop.altmetric.com/details/5152221/"
 
     a = scrape_handles(iop)
     for i in a:
         print(i)
-
 
     a = scrape_links(iop)
     for i in a:
