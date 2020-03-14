@@ -7,22 +7,13 @@ Here's the story. I was about to submit an article to an IOP journal. It referre
 
 This (very simple) python script consists of a two functions which check the [altmetric](https://www.altmetric.com/) page for a paper and returns either, all the twitter handles as a de-duplicated list, or links to all the tweets where the paper is mentioned.
 
-for example:
+for example: `scrape_handles("https://iop.altmetric.com/details/5152221/")`
 
-    `scrape_handles("https://iop.altmetric.com/details/5152221/")`
+returns: `['@handle0', '@handle1', '@handle2', '@handle3', '@handle4', '@handle5', '@handle6'...]`
 
-returns:
+and: `scrape_links("https://iop.altmetric.com/details/5152221/")`
 
-    `['@handle0', '@handle1', '@handle2', '@handle3',
-    '@handle4', '@handle5', '@handle6'...]`
-
-and:
-
-   `scrape_links("https://iop.altmetric.com/details/5152221/")`
-
-returns:
-
-    `['url0', 'url1', 'url2', 'url3', 'url4', 'url5', 'url6'...]`
+returns: `['url0', 'url1', 'url2', 'url3', 'url4', 'url5', 'url6'...]`
 
 Limitations:
 + This only works for the first 5 pages of twitter handles. If there are more than this, you'll need to modify the code a bit(just change the n value for the `while` loop in each function
