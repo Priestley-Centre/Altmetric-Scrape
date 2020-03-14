@@ -1,4 +1,7 @@
 # Altmetric-Scrape
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Priestley-Centre/Altmetric-Scrape?include_prereleases)](https://github.com/Priestley-Centre/Altmetric-Scrape/releases/tag/v1.0)
+[![GitHub](https://img.shields.io/github/license/Priestley-Centre/Altmetric-Scrape)](https://github.com/Priestley-Centre/Altmetric-Scrape/blob/master/LICENSE)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 Here's the story. I was about to submit an article to an IOP journal. It referred quite a lot to another paper published in the same journal, which had already been talked about on twitter. I needed a way to contact all the tweeps that talked about it before, to let them know that the paper cast a new light on what they had shared.
 
 This (very simple) python script consists of a single function which checks the [altmetric](https://www.altmetric.com/) page for a paper and returns all the twitter handles as a de-duplicated list.
